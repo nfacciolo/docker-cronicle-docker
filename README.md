@@ -1,28 +1,28 @@
 # docker-cronicle-docker
-[![Docker Pulls](https://img.shields.io/docker/pulls/bluet/cronicle-docker.svg)](https://shields.io/)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbluet%2Fdocker-cronicle-docker.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbluet%2Fdocker-cronicle-docker?ref=badge_shield)
+[![Docker Pulls](https://img.shields.io/docker/pulls/nicolasfco/cronicle-docker.svg)](https://shields.io/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fnicolasfco%2Fdocker-cronicle-docker.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fnicolasfco%2Fdocker-cronicle-docker?ref=badge_shield)
 
 Workflow scheduler to run docker jobs just like cron, but inside own container, with Cronicle in docker.
 Run dockerized Cronicle cron jobs in docker container.
 
-- GitHub: https://github.com/bluet/docker-cronicle-docker
-- Docker Hub: https://hub.docker.com/r/bluet/cronicle-docker
+- GitHub: https://github.com/nicolasfco/docker-cronicle-docker
+- Docker Hub: https://hub.docker.com/r/nicolasfco/cronicle-docker
 
 # Supported tags
 
-* [Tags](https://hub.docker.com/r/bluet/cronicle-docker/tags) 
-* [Dockerfile](https://raw.githubusercontent.com/bluet/docker-cronicle-docker/master/docker/Dockerfile)
+* [Tags](https://hub.docker.com/r/nicolasfco/cronicle-docker/tags) 
+* [Dockerfile](https://raw.githubusercontent.com/nicolasfco/docker-cronicle-docker/master/docker/Dockerfile)
 
 # Usage
 
 ## Install
 ```sh
-docker pull bluet/cronicle-docker:latest
+docker pull nicolasfco/cronicle-docker:latest
 ```
 
 ## Running
 ```sh
-docker run -v /var/run/docker.sock:/var/run/docker.sock --hostname localhost -p 3012:3012 --name cronicle bluet/cronicle-docker:latest
+docker run -v /var/run/docker.sock:/var/run/docker.sock --hostname localhost -p 3012:3012 --name cronicle nicolasfco/cronicle-docker:latest
 ```
 
 Alternatively with persistent data and logs:
@@ -36,7 +36,7 @@ docker run \
         --hostname localhost \
         -p 3012:3012\
         --name cronicle \
-        bluet/cronicle-docker:latest
+        nicolasfco/cronicle-docker:latest
 ```
 
 The web UI will be available at: http://localhost:3012
@@ -44,7 +44,7 @@ The web UI will be available at: http://localhost:3012
 > NOTE: please replace the hostname `localhost`, this is only for testing
 > purposes! If you rename the hostname also consider setting the environmental
 > variable `CRONICLE_base_app_url`.
-> e.g `docker run --name cronicle --hostname cronicle-host -p 3012:3012 -e CRONICLE_base_app_url='http://cronicle-host:3012' bluet/cronicle-docker:latest`
+> e.g `docker run --name cronicle --hostname cronicle-host -p 3012:3012 -e CRONICLE_base_app_url='http://cronicle-host:3012' nicolasfco/cronicle-docker:latest`
 
 ## Volumes
 
@@ -90,9 +90,9 @@ The default credentials for the web interface are: `admin` / `admin`
 
 
 # Reference
-- Docker Hub: https://hub.docker.com/r/bluet/cronicle-docker
+- Docker Hub: https://hub.docker.com/r/nicolasfco/cronicle-docker
 - https://github.com/jhuckaby/Cronicle
 - https://github.com/belsander/docker-cronicle
 
 ## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbluet%2Fdocker-cronicle-docker.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbluet%2Fdocker-cronicle-docker?ref=badge_large)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fnicolasfco%2Fdocker-cronicle-docker.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fnicolasfco%2Fdocker-cronicle-docker?ref=badge_large)

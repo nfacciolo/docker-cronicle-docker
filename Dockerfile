@@ -1,8 +1,8 @@
 FROM       docker:20.10
-LABEL      maintainer="BlueT - Matthew Lien - 練喆明 <bluet@bluet.org>"
+LABEL      maintainer="N1colas - Nicolas Facciolo - <nicolas@reactic.io>"
 
 # Docker defaults
-ENV        CRONICLE_VERSION 0.8.62
+ENV        CRONICLE_VERSION 0.9.2
 ENV        CRONICLE_base_app_url 'http://localhost:3012'
 ENV        CRONICLE_WebServer__http_port 3012
 ENV        CRONICLE_WebServer__https_port 443
