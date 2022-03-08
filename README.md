@@ -5,7 +5,7 @@
 Workflow scheduler to run docker jobs just like cron, but inside own container, with Cronicle in docker.
 Run dockerized Cronicle cron jobs in docker container.
 
-- GitHub: https://github.com/nicolasfco/docker-cronicle-docker
+- GitHub: https://github.com/nfacciolo/docker-cronicle-docker
 - Docker Hub: https://hub.docker.com/r/nicolasfco/cronicle-docker
 
 # Supported tags
